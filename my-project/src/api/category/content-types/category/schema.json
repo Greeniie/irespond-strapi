@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "Category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "categoryName": {
+      "type": "string"
+    },
+    "life_hacks": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::life-hack.life-hack",
+      "inversedBy": "categories"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "life_hacks",
+  "info": {
+    "singularName": "life-hack",
+    "pluralName": "life-hacks",
+    "displayName": "LifeHack",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "ArticleBody": {
+      "type": "richtext",
+      "required": true
+    },
+    "Author": {
+      "type": "string"
+    },
+    "estimatedReadTime": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "life_hacks"
+    }
+  }
+}
